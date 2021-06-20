@@ -1,7 +1,6 @@
 package com.project;
 //This class store no. of cars and update the array of cars
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -181,8 +180,8 @@ public class Showroom{
 
 			FileWriter fileWriter = new FileWriter(fname);
 			fileWriter.write("You have bought " + chosenCar);
-			fileWriter.write("This is your receipt of Rs" + chosenCarPrice);
-			fileWriter.write("Come Again");
+			fileWriter.write("\nThis is your receipt of Rs" + chosenCarPrice);
+			fileWriter.write("\nCome Back Soon");
 			fileWriter.close();
 			System.out.println("Your receipt has been generated!");
 			System.out.println("Please collect your receipt");

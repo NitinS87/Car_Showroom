@@ -3,11 +3,19 @@ package com.project;
 // It has name, engine, design, maintenance and price variables which stores data accordingly
 
 public class Car{
+	//name to store the car name
+	//engine to store the engine info
+	//design to store the info of looks and interiors
+	//Maintenance to store the maintenance cost
+	//price to store the price of the car
+	//year to store the manufactured year
+
 	String name = "Car";
 	String engine = "This is a engine";
 	String design = "It has 4 seats and average interiors design";
 	String Maintenance = "This car has average maintenance";
 	String price = "price in Rs";
+	String year = "manufactured year";
 
 	@Override
 	public String toString(){
@@ -16,7 +24,8 @@ public class Car{
 				"Engine='" + engine + '\'' + "\n" +
 				"Design='" + design + '\'' + "\n" +
 				"Maintenance='" + Maintenance + '\'' + "\n" +
-				"Price='" + " Rs" + price + '\'' +
+				"Price='" + price + '\'' + "\n" +
+				"Year='" + year + '\'' +
 				'}';
 	}
 }
@@ -28,6 +37,7 @@ class Alto extends Car{
 	String design = "It has 4 seats and low interiors Hatchback design";
 	String Maintenance = "This car has low maintenance";
 	long price = 500000;
+	String year = "2021";
 
 	@Override
 	public String toString(){
@@ -36,7 +46,8 @@ class Alto extends Car{
 				"Engine='" + engine + '\'' + "\n" +
 				"Design='" + design + '\'' + "\n" +
 				"Maintenance='" + Maintenance + '\'' + "\n" +
-				"Price='" + " Rs" + price + '\'' +
+				"Price='" + price + '\'' + "\n" +
+				"Year='" + year + '\'' +
 				'}';
 	}
 }
@@ -47,6 +58,7 @@ class Swift extends Car{
 	String design = "It has 4 seats and average interiors Hatchback design";
 	String Maintenance = "This car has low maintenance";
 	long price = 800000;
+	String year = "2021";
 
 	@Override
 	public String toString(){
@@ -55,7 +67,8 @@ class Swift extends Car{
 				"Engine='" + engine + '\'' + "\n" +
 				"Design='" + design + '\'' + "\n" +
 				"Maintenance='" + Maintenance + '\'' + "\n" +
-				"Price='" + " Rs" + price + '\'' +
+				"Price='" + price + '\'' + "\n" +
+				"Year='" + year + '\'' +
 				'}';
 	}
 }
@@ -66,6 +79,7 @@ class Baleno extends Car{
 	String design = "It has 4-5 seats and average interior Sedan design";
 	String Maintenance = "This car has low-average maintenance";
 	long price = 1000000;
+	String year = "2021";
 
 	@Override
 	public String toString(){
@@ -74,7 +88,8 @@ class Baleno extends Car{
 				"Engine='" + engine + '\'' + "\n" +
 				"Design='" + design + '\'' + "\n" +
 				"Maintenance='" + Maintenance + '\'' + "\n" +
-				"Price='" + " Rs" + price + '\'' +
+				"Price='" + price + '\'' + "\n" +
+				"Year='" + year + '\'' +
 				'}';
 	}
 }
@@ -85,6 +100,7 @@ class City extends Car{
 	String design = "It has 4-5 seats and average interiors Sedan design";
 	String Maintenance = "This car has average maintenance";
 	long price = 1200000;
+	String year = "2021";
 
 	@Override
 	public String toString(){
@@ -93,7 +109,8 @@ class City extends Car{
 				"Engine='" + engine + '\'' + "\n" +
 				"Design='" + design + '\'' + "\n" +
 				"Maintenance='" + Maintenance + '\'' + "\n" +
-				"Price='" + " Rs" + price + '\'' +
+				"Price='" + price + '\'' + "\n" +
+				"Year='" + year + '\'' +
 				'}';
 	}
 }
@@ -104,6 +121,7 @@ class Laura extends Car{
 	String design = "It has 4-5 seats and average interiors Sedan design";
 	String Maintenance = "This car has average maintenance";
 	long price = 1500000;
+	String year = "2021";
 
 	@Override
 	public String toString(){
@@ -112,7 +130,8 @@ class Laura extends Car{
 				"Engine='" + engine + '\'' + "\n" +
 				"Design='" + design + '\'' + "\n" +
 				"Maintenance='" + Maintenance + '\'' + "\n" +
-				"Price='" + " Rs" + price + '\'' +
+				"Price='" + price + '\'' + "\n" +
+				"Year='" + year + '\'' +
 				'}';
 	}
 }
@@ -123,6 +142,7 @@ class Scorpio extends Car{
 	String design = "It has 6-7 seats and above average interiors SUV design";
 	String Maintenance = "This car has average high maintenance";
 	long price = 2000000;
+	String year = "2021";
 
 	@Override
 	public String toString(){
@@ -131,7 +151,8 @@ class Scorpio extends Car{
 				"Engine='" + engine + '\'' + "\n" +
 				"Design='" + design + '\'' + "\n" +
 				"Maintenance='" + Maintenance + '\'' + "\n" +
-				"Price='" + " Rs" + price + '\'' +
+				"Price='" + price + '\'' + "\n" +
+				"Year='" + year + '\'' +
 				'}';
 	}
 }
@@ -142,6 +163,7 @@ class Fortuner extends Car{
 	String design = "It has 6-7 seats and above average interiors SUV design";
 	String Maintenance = "This car has average-high maintenance";
 	long price = 3000000;
+	String year = "2021";
 
 	@Override
 	public String toString(){
@@ -150,7 +172,8 @@ class Fortuner extends Car{
 				"Engine='" + engine + '\'' + "\n" +
 				"Design='" + design + '\'' + "\n" +
 				"Maintenance='" + Maintenance + '\'' + "\n" +
-				"Price='" + " Rs" + price + '\'' +
+				"Price='" + price + '\'' + "\n" +
+				"Year='" + year + '\'' +
 				'}';
 	}
 }
@@ -162,6 +185,7 @@ class Model3 extends Car{
 	String design = "It has 4 seats and high-end interiors Sedan design";
 	String Maintenance = "This car has average maintenance";
 	long price = 6000000;
+	String year = "2021";
 
 	@Override
 	public String toString(){
@@ -170,7 +194,8 @@ class Model3 extends Car{
 				"Engine='" + engine + '\'' + "\n" +
 				"Design='" + design + '\'' + "\n" +
 				"Maintenance='" + Maintenance + '\'' + "\n" +
-				"Price='" + " Rs" + price + '\'' +
+				"Price='" + price + '\'' + "\n" +
+				"Year='" + year + '\'' +
 				'}';
 	}
 }
@@ -181,6 +206,7 @@ class R8 extends Car{
 	String design = "It has 2 seats and high end Sports-car interiors design";
 	String Maintenance = "This car has high  maintenance";
 	long price = 28000000;
+	String year = "2021";
 
 	@Override
 	public String toString(){
@@ -189,7 +215,8 @@ class R8 extends Car{
 				"Engine='" + engine + '\'' + "\n" +
 				"Design='" + design + '\'' + "\n" +
 				"Maintenance='" + Maintenance + '\'' + "\n" +
-				"Price='" + " Rs" + price + '\'' +
+				"Price='" + price + '\'' + "\n" +
+				"Year='" + year + '\'' +
 				'}';
 	}
 }
@@ -200,6 +227,7 @@ class Roadster extends Car{
 	String design = "It has 2 seats and high end Sports car interiors design";
 	String Maintenance = "This car has average maintenance";
 	long price = 30000000;
+	String year = "2021";
 
 	@Override
 	public String toString(){
@@ -208,7 +236,8 @@ class Roadster extends Car{
 				"Engine='" + engine + '\'' + "\n" +
 				"Design='" + design + '\'' + "\n" +
 				"Maintenance='" + Maintenance + '\'' + "\n" +
-				"Price='" + " Rs" + price + '\'' +
+				"Price='" + price + '\'' + "\n" +
+				"Year='" + year + '\'' +
 				'}';
 	}
 }
@@ -219,6 +248,7 @@ class Aventador extends Car{
 	String design = "It has 2 seats and high end Sports car interiors design";
 	String Maintenance = "This car has high maintenance";
 	long price = 50000000;
+	String year = "2021";
 
 	@Override
 	public String toString(){
@@ -227,7 +257,8 @@ class Aventador extends Car{
 				"Engine='" + engine + '\'' + "\n" +
 				"Design='" + design + '\'' + "\n" +
 				"Maintenance='" + Maintenance + '\'' + "\n" +
-				"Price='" + " Rs" + price + '\'' +
+				"Price='" + price + '\'' + "\n" +
+				"Year='" + year + '\'' +
 				'}';
 	}
 }
