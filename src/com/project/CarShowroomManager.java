@@ -29,13 +29,18 @@ public class CarShowroomManager{
 			}else if(choice.equals("2")){
 				User_pass up = new User_pass();
 				up.logIn();
-				sh.showAvailableCars();
-				//calling the chooseCar function to ask the user to choose a car
-				sh.chooseCar();
+				if(up.logIn() == 1){
+					sh.showAvailableCars();
+					//calling the chooseCar function to ask the user to choose a car
+					sh.chooseCar();
 
-				sh.Receipt();
+					sh.Receipt();
 
-				status = true;
+					status = true;
+				}
+				else{
+					status = false;
+				}
 			}else{
 				System.out.println("Thank you for using our program");
 				status = false;

@@ -176,11 +176,13 @@ public class Showroom{
 		//Writing a file
 		try{
 			int random_int = (int)Math.floor(Math.random()*(20000-50+1)+50);
-
+			String fname = "Receipt" + random_int +".txt";
 			//random number is added to receipt to avoid naming conflict
 
-			FileWriter fileWriter = new FileWriter("Receipt" + random_int + ".txt");
+			FileWriter fileWriter = new FileWriter(fname);
+			fileWriter.write("You have bought " + chosenCar);
 			fileWriter.write("This is your receipt of Rs" + chosenCarPrice);
+			fileWriter.write("Come Again");
 			fileWriter.close();
 			System.out.println("Your receipt has been generated!");
 			System.out.println("Please collect your receipt");

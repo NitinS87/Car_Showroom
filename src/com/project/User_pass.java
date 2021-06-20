@@ -22,7 +22,7 @@ public class User_pass{
 
 	}
 
-	void logIn() throws IOException{
+	int logIn() throws IOException{
 		System.out.println("****User Login****");
 		Scanner myObj = new Scanner(System.in);
 		System.out.println("Enter your Username: ");
@@ -61,5 +61,6 @@ public class User_pass{
 		}else{
 			System.out.println("****LOGIN FAILED TRY AGAIN****\n");
 		}
+		return flag;
 	}
 }
