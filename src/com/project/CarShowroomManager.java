@@ -15,14 +15,14 @@ public class CarShowroomManager{
 		boolean status;
 		do{
 			System.out.println("*****Welcome to Star Showroom*****");
-			System.out.println("Enter your choice: ");
 			System.out.println("1. Register");
 			System.out.println("2. Login");
 			System.out.println("3. Exit");
+			System.out.print("Enter your choice: ");
 			//choice is used to input the index value
 			String choice = sc.next();
 			if(choice.equals("1")){
-				System.out.println("\n------REGISTER NEW USER------\n");
+				System.out.println("\n------REGISTER NEW USER------");
 				//user_pass class is instantiated to call its method
 				User_pass up = new User_pass();
 				//register method is called to register a new user

@@ -52,13 +52,13 @@ public class Showroom{
 
 		//loop for switch case to ask the user for a certain car details
 		do{
-			System.out.println("Which car do you wish to buy(Please enter numeric keyword): ");
+			System.out.print("Which car do you wish to buy(Please enter numeric keyword): ");
 			String show = sc.next();
 			switch(show){
 				case "1" -> {
 					Alto alto = new Alto();
 					System.out.println(alto);
-					System.out.println("Do you want to buy this car(Press y if yes or press n if not): ");
+					System.out.print("Do you want to buy this car(Press y if yes or press n if not): ");
 					wantToBuy = sc.next();
 					chosenCar = alto.name;
 					chosenCarPrice = alto.price;
@@ -66,7 +66,7 @@ public class Showroom{
 				case "2" -> {
 					Swift swift = new Swift();
 					System.out.println(swift);
-					System.out.println("Do you want to buy this car(Press y if yes or press n if not): ");
+					System.out.print("Do you want to buy this car(Press y if yes or press n if not): ");
 					wantToBuy = sc.next();
 					chosenCar = swift.name;
 					chosenCarPrice = swift.price;
@@ -74,7 +74,7 @@ public class Showroom{
 				case "3" -> {
 					Baleno baleno = new Baleno();
 					System.out.println(baleno);
-					System.out.println("Do you want to buy this car(Press y if yes or press n if not): ");
+					System.out.print("Do you want to buy this car(Press y if yes or press n if not): ");
 					wantToBuy = sc.next();
 					chosenCar = baleno.name;
 					chosenCarPrice = baleno.price;
@@ -82,7 +82,7 @@ public class Showroom{
 				case "4" -> {
 					City city = new City();
 					System.out.println(city);
-					System.out.println("Do you want to buy this car(Press y if yes or press n if not): ");
+					System.out.print("Do you want to buy this car(Press y if yes or press n if not): ");
 					wantToBuy = sc.next();
 					chosenCar = city.name;
 					chosenCarPrice = city.price;
@@ -90,7 +90,7 @@ public class Showroom{
 				case "5" -> {
 					Laura laura = new Laura();
 					System.out.println(laura);
-					System.out.println("Do you want to buy this car(Press y if yes or press n if not): ");
+					System.out.print("Do you want to buy this car(Press y if yes or press n if not): ");
 					wantToBuy = sc.next();
 					chosenCar = laura.name;
 					chosenCarPrice = laura.price;
@@ -98,7 +98,7 @@ public class Showroom{
 				case "6" -> {
 					Scorpio scorpio = new Scorpio();
 					System.out.println(scorpio);
-					System.out.println("Do you want to buy this car(Press y if yes or press n if not): ");
+					System.out.print("Do you want to buy this car(Press y if yes or press n if not): ");
 					wantToBuy = sc.next();
 					chosenCar = scorpio.name;
 					chosenCarPrice = scorpio.price;
@@ -106,7 +106,7 @@ public class Showroom{
 				case "7" -> {
 					Fortuner fortuner = new Fortuner();
 					System.out.println(fortuner);
-					System.out.println("Do you want to buy this car(Press y if yes or press n if not): ");
+					System.out.print("Do you want to buy this car(Press y if yes or press n if not): ");
 					wantToBuy = sc.next();
 					chosenCar = fortuner.name;
 					chosenCarPrice = fortuner.price;
@@ -114,7 +114,7 @@ public class Showroom{
 				case "8" -> {
 					Model3 model3 = new Model3();
 					System.out.println(model3);
-					System.out.println("Do you want to buy this car(Press y if yes or press n if not): ");
+					System.out.print("Do you want to buy this car(Press y if yes or press n if not): ");
 					wantToBuy = sc.next();
 					chosenCar = model3.name;
 					chosenCarPrice = model3.price;
@@ -122,7 +122,7 @@ public class Showroom{
 				case "9" -> {
 					R8 r8 = new R8();
 					System.out.println(r8);
-					System.out.println("Do you want to buy this car(Press y if yes or press n if not): ");
+					System.out.print("Do you want to buy this car(Press y if yes or press n if not): ");
 					wantToBuy = sc.next();
 					chosenCar = r8.name;
 					chosenCarPrice = r8.price;
@@ -130,7 +130,7 @@ public class Showroom{
 				case "10" -> {
 					Roadster roadster = new Roadster();
 					System.out.println(roadster);
-					System.out.println("Do you want to buy this car(Press y if yes or press n if not): ");
+					System.out.print("Do you want to buy this car(Press y if yes or press n if not): ");
 					wantToBuy = sc.next();
 					chosenCar = roadster.name;
 					chosenCarPrice = roadster.price;
@@ -138,13 +138,13 @@ public class Showroom{
 				case "11" -> {
 					Aventador aventador = new Aventador();
 					System.out.println(aventador);
-					System.out.println("Do you want to buy this car(Press 'y' if yes or press 'n' if not): ");
+					System.out.print("Do you want to buy this car(Press 'y' if yes or press 'n' if not): ");
 					wantToBuy = sc.next();
 					chosenCar = aventador.name;
 					chosenCarPrice = aventador.price;
 				}
 				default -> {
-					System.out.println("You have entered wrong");
+					System.out.print("You have entered wrong");
 					wantToBuy = "n";
 				}
 			}
@@ -152,7 +152,7 @@ public class Showroom{
 		//issueCar for issuing chosenCar and update it in the array
 		issueCar(chosenCar);
 
-		System.out.println("Enter the amount of the car " + chosenCarPrice + ": ");
+		System.out.print("Enter the amount of the car " + chosenCarPrice + ": ");
 	}
 
 	//Receipt() is used to write the price of the car and give a receipt using file handling
@@ -179,9 +179,12 @@ public class Showroom{
 			//random number is added to receipt to avoid naming conflict
 
 			FileWriter fileWriter = new FileWriter(fname);
-			fileWriter.write("You have bought " + chosenCar);
+			fileWriter.write("------------------------------------------------------------");
+			fileWriter.write("\n----- Welcome To Star Showroom-----");
+			fileWriter.write("\nYou have bought " + chosenCar);
 			fileWriter.write("\nThis is your receipt of Rs" + chosenCarPrice);
 			fileWriter.write("\nCome Back Soon");
+			fileWriter.write("\n------------------------------------------------------------");
 			fileWriter.close();
 			System.out.println("Your receipt has been generated!");
 			System.out.println("Please collect your receipt");

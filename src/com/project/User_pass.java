@@ -10,9 +10,9 @@ public class User_pass{
 		//id is used to store the username
 		//pass is used to store the password
 		Scanner myObj = new Scanner(System.in);
-		System.out.println("Enter your Username: ");
+		System.out.print("Enter your Username: ");
 		String id = myObj.next();
-		System.out.println("Enter your password: ");
+		System.out.print("Enter your password: ");
 		String pass = myObj.next();
 		//used buffer writer to write data in Login Details file
 		BufferedWriter bw = new BufferedWriter(new FileWriter("Login Details.txt", true));
@@ -32,9 +32,9 @@ public class User_pass{
 		//id is used to store the username
 		//pass is used to store the password
 		Scanner myObj = new Scanner(System.in);
-		System.out.println("Enter your Username: ");
+		System.out.print("Enter your Username: ");
 		String id = myObj.next();
-		System.out.println("Enter your password: ");
+		System.out.print("Enter your password: ");
 		String pass = myObj.next();
 		//bufferReader is used to read the data in file
 		BufferedReader br = new BufferedReader(new FileReader("Login Details.txt"));
