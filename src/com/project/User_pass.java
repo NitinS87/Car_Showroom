@@ -53,7 +53,7 @@ public class User_pass{
 		}
 		br.close();
 		if(flag == 1){
-			System.out.println("\nSuccessfully Log IN\n");
+			System.out.println("\nSuccessfully Logged-In\n");
 
 		}else{
 			System.out.println("****LOGIN FAILED TRY AGAIN****\n");

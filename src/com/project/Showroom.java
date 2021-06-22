@@ -155,6 +155,18 @@ public class Showroom{
 		System.out.print("Enter the amount of the car " + chosenCarPrice + ": ");
 	}
 
+	//issueCar is used to issue and buy a car
+	void issueCar(String Car){
+		for(int i = 0; i < this.cars.length; i++){
+			if(this.cars[i].equals(Car)){
+				System.out.println(Car + " has been issued!");
+				this.cars[i] = null;
+				return;
+			}
+		}
+		System.out.println("This car does not exist");
+	}
+
 	//Receipt() is used to write the price of the car and give a receipt using file handling
 	void Receipt(){
 		Scanner sc = new Scanner(System.in);
@@ -163,6 +175,7 @@ public class Showroom{
 		//loop for finding out that the entered amount is correct or not
 		do{
 			amount = sc.nextLong();
+
 			if(amount < chosenCarPrice || amount > chosenCarPrice){
 				System.out.println("You have entered wrong amount");
 				System.out.println("Please enter the correct amount");
@@ -192,18 +205,4 @@ public class Showroom{
 			e.printStackTrace();
 		}
 	}
-
-	//issueCar is used to issue and buy a car
-	void issueCar(String Car){
-		for(int i = 0; i < this.cars.length; i++){
-			if(this.cars[i].equals(Car)){
-				System.out.println(Car + " has been issued!");
-				this.cars[i] = null;
-				return;
-			}
-		}
-		System.out.println("This car does not exist");
-	}
-
-
 }

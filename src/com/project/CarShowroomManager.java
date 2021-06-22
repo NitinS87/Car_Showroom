@@ -21,32 +21,36 @@ public class CarShowroomManager{
 			System.out.print("Enter your choice: ");
 			//choice is used to input the index value
 			String choice = sc.next();
-			if(choice.equals("1")){
-				System.out.println("\n------REGISTER NEW USER------");
-				//user_pass class is instantiated to call its method
-				User_pass up = new User_pass();
-				//register method is called to register a new user
-				up.registerNewUser();
-				status = true;
-			}else if(choice.equals("2")){
-				User_pass up = new User_pass();
-				//
-				if(up.logIn() == 1){
-					//show the available cars in showroom class
-					sh.showAvailableCars();
-					//calling the chooseCar function to ask the user to choose a car
-					sh.chooseCar();
-					//for creating receipt the method in showroom class is formed
-					sh.Receipt();
+			switch(choice){
+				case "1" ->{
+					System.out.println("\n------REGISTER NEW USER------");
+					//user_pass class is instantiated to call its method
+					User_pass up = new User_pass();
+					//register method is called to register a new user
+					up.registerNewUser();
+					status = true;
+				}
+				case "2" -> {
+					User_pass up = new User_pass();
+					//
+					if(up.logIn() == 1){
+						//show the available cars in showroom class
+						sh.showAvailableCars();
+						//calling the chooseCar function to ask the user to choose a car
+						sh.chooseCar();
+						//for creating receipt the method in showroom class is formed
+						sh.Receipt();
 
-					status = true;
+						status = true;
+					}else{
+						status = true;
+					}
 				}
-				else{
-					status = true;
+				case "3" -> {
+					System.out.println("Thank you for using our program");
+					status = false;
 				}
-			}else{
-				System.out.println("Thank you for using our program");
-				status = false;
+				default -> status = true;
 			}
 		}while(status);
 	}
